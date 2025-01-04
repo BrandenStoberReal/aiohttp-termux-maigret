@@ -19,10 +19,10 @@ patch -p1 < fix.patch
 pip install .
 ```
 
-## Usage example with Maigret Python package
+## Usage example
 
 ```bash
-# I don't know if this is even required but it can't really hurt. Other guy had it in his fork so im including it here.
+# I don't know if this is even required but it can't really hurt. Other guy had it in his fork so i'm including it here.
 
 # Manual DNS declaration
 DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
