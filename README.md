@@ -1,12 +1,10 @@
-# Python aiohttp package for Termux (Android)
+# Python aiohttp package for Termux (Android) and Maigret
 
 ### DISCLAIMER
 
-This is a **workaround**. I assume the real fix should happen directly in `c-ares`, but this was way faster and enough for my home assistant purposes.
+This is a **workaround** of a **workaround** I found on GitHub and forked. I assume the real fix should happen directly in `c-ares`, but this was way faster and enough for my home assistant purposes.
 
-Changes were made in order to be able to support homeassistant-2024.9.3 python package on Android.
-
-If you want support for newer versions of HASS, you'd have to fix `uv` Python package support - currently it doesn't detect the interpreter correctly https://github.com/astral-sh/uv/issues/7373 https://github.com/astral-sh/uv/issues/2408
+Changes were made in order to be able to support Maigret-0.5.0a python package on Android.
 
 ### Purpose
 
@@ -72,18 +70,18 @@ It also fixes the SSL errors like:
 2024-10-27_03:19:29.75663 aiogithubapi.exceptions.GitHubConnectionException: Request exception for 'https://github.com/login/device/code' with - Cannot connect to host github.com:443 ssl:default [None]
 ```
 
-## Usage example with Home Assistant Core Python package
+## Usage example with Maigret Python package
 
 ```bash
-DNS_SERVERS=1.1.1.1,8.8.8.8 hass
+DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
 ```
 
 # Installation on Termux
 
 ```bash
-pip download aiohttp==3.10.5
-tar -xzf aiohttp-3.10.5.tar.gz
-cd aiohttp-3.10.5
+pip download aiohttp==3.11.11
+tar -xzf aiohttp-3.11.11.tar.gz
+cd aiohttp-3.11.11
 curl -L https://github.com/Neurovert/aiohttp-termux/commit/722abe0a9250a836feb985a9154fd458ff149df6.patch -o fix.patch
 patch -p1 < fix.patch
 pip install .
