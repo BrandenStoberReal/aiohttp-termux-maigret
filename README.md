@@ -8,16 +8,6 @@ Changes were made in order to be able to support the ``Maigret-0.5.0a`` python p
 
 All credit goes to the fork author, as I did virtually nothing except update the patch and repackage it for this version. 
 
-## Usage example with Maigret Python package
-
-```bash
-# Manual DNS declaration
-DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
-
-# Or be cool and put it right in your .bashrc
-export DNS_SERVERS=1.1.1.1,8.8.8.8
-```
-
 # Installation on Termux
 
 ```bash
@@ -27,6 +17,16 @@ cd aiohttp-3.11.11
 curl -L https://raw.githubusercontent.com/BrandenStoberReal/aiohttp-termux-maigret/refs/heads/3.11.11-termux/brandenfix.patch -o fix.patch
 patch -p1 < fix.patch
 pip install .
+```
+
+## Usage example with Maigret Python package
+
+```bash
+# Manual DNS declaration
+DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
+
+# Or be cool and put it right in your .bashrc
+export DNS_SERVERS=1.1.1.1,8.8.8.8
 ```
 
 ### Purpose
