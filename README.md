@@ -6,6 +6,8 @@ This is a **workaround** of a **workaround** I found on GitHub and forked. I ass
 
 Changes were made in order to be able to support the ``Maigret-0.5.0a`` python package on Android. Specifically, this patch is based on ``aiohttp v3.11.11``.
 
+All credit goes to the fork author, as I did virtually nothing except update the patch and repackage it for this version. 
+
 ### Purpose
 
 Version made as a workaround for the `Could not contact DNS servers` error stemming from `c-ares` incompatibility with Android.
