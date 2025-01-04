@@ -73,7 +73,11 @@ It also fixes the SSL errors like:
 ## Usage example with Maigret Python package
 
 ```bash
+# Manual DNS declaration
 DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
+
+# Or be cool and put it right in your .bashrc
+export DNS_SERVERS=1.1.1.1,8.8.8.8
 ```
 
 # Installation on Termux
@@ -82,7 +86,7 @@ DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
 pip download aiohttp==3.11.11
 tar -xzf aiohttp-3.11.11.tar.gz
 cd aiohttp-3.11.11
-curl -L https://raw.githubusercontent.com/BrandenStoberReal/aiohttp-termux-maigret/refs/heads/3.10.5-termux/brandenfix.patch -o fix.patch
+curl -L https://raw.githubusercontent.com/BrandenStoberReal/aiohttp-termux-maigret/refs/heads/3.11.11-termux/brandenfix.patch -o fix.patch
 patch -p1 < fix.patch
 pip install .
 ```
