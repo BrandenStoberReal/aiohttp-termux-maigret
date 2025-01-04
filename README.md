@@ -1,10 +1,10 @@
-# Python aiohttp package for Termux (Android) and Maigret
+# Python aiohttp package for Termux w/ Maigret
 
 ### DISCLAIMER
 
-This is a **workaround** of a **workaround** I found on GitHub and forked. I assume the real fix should happen directly in `c-ares`, but this was way faster and enough for my home assistant purposes.
+This is a **workaround** of a **workaround** I found on GitHub and forked. I assume the real fix should happen directly in `c-ares`, but this was way faster and enough for my cyberstalking purposes.
 
-Changes were made in order to be able to support Maigret-0.5.0a python package on Android.
+Changes were made in order to be able to support the ``Maigret-0.5.0a`` python package on Android. Specifically, this patch is based on ``aiohttp v3.11.11``.
 
 ### Purpose
 
