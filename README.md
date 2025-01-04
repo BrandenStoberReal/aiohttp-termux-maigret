@@ -8,7 +8,7 @@ Changes were made in order to be able to support the ``Maigret-0.5.0a`` python p
 
 All credit goes to the fork author, as I did virtually nothing except update the patch and repackage it for this version. 
 
-# Installation on Termux
+## Installation on Termux
 
 ```bash
 pip download aiohttp==3.11.11
