@@ -82,7 +82,7 @@ DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
 pip download aiohttp==3.11.11
 tar -xzf aiohttp-3.11.11.tar.gz
 cd aiohttp-3.11.11
-curl -L https://github.com/Neurovert/aiohttp-termux/commit/722abe0a9250a836feb985a9154fd458ff149df6.patch -o fix.patch
+curl -L https://raw.githubusercontent.com/BrandenStoberReal/aiohttp-termux-maigret/refs/heads/3.10.5-termux/brandenfix.patch -o fix.patch
 patch -p1 < fix.patch
 pip install .
 ```
