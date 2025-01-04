@@ -29,7 +29,7 @@ DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
 export DNS_SERVERS=1.1.1.1,8.8.8.8
 ```
 
-### Purpose
+## Purpose
 
 Version made as a workaround for the `Could not contact DNS servers` error stemming from `c-ares` incompatibility with Android.
 It also fixes the SSL errors like:
