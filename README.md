@@ -8,6 +8,27 @@ Changes were made in order to be able to support the ``Maigret-0.5.0a`` python p
 
 All credit goes to the fork author, as I did virtually nothing except update the patch and repackage it for this version. 
 
+## Usage example with Maigret Python package
+
+```bash
+# Manual DNS declaration
+DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
+
+# Or be cool and put it right in your .bashrc
+export DNS_SERVERS=1.1.1.1,8.8.8.8
+```
+
+# Installation on Termux
+
+```bash
+pip download aiohttp==3.11.11
+tar -xzf aiohttp-3.11.11.tar.gz
+cd aiohttp-3.11.11
+curl -L https://raw.githubusercontent.com/BrandenStoberReal/aiohttp-termux-maigret/refs/heads/3.11.11-termux/brandenfix.patch -o fix.patch
+patch -p1 < fix.patch
+pip install .
+```
+
 ### Purpose
 
 Version made as a workaround for the `Could not contact DNS servers` error stemming from `c-ares` incompatibility with Android.
@@ -70,25 +91,4 @@ It also fixes the SSL errors like:
 2024-10-27_03:19:29.75661   File "/data/data/com.termux/files/home/hass/lib/python3.12/site-packages/aiogithubapi/client.py", line 141, in async_call_api
 2024-10-27_03:19:29.75662     raise GitHubConnectionException(
 2024-10-27_03:19:29.75663 aiogithubapi.exceptions.GitHubConnectionException: Request exception for 'https://github.com/login/device/code' with - Cannot connect to host github.com:443 ssl:default [None]
-```
-
-## Usage example with Maigret Python package
-
-```bash
-# Manual DNS declaration
-DNS_SERVERS=1.1.1.1,8.8.8.8 maigret --self-check
-
-# Or be cool and put it right in your .bashrc
-export DNS_SERVERS=1.1.1.1,8.8.8.8
-```
-
-# Installation on Termux
-
-```bash
-pip download aiohttp==3.11.11
-tar -xzf aiohttp-3.11.11.tar.gz
-cd aiohttp-3.11.11
-curl -L https://raw.githubusercontent.com/BrandenStoberReal/aiohttp-termux-maigret/refs/heads/3.11.11-termux/brandenfix.patch -o fix.patch
-patch -p1 < fix.patch
-pip install .
 ```
